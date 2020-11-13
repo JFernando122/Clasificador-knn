@@ -54,3 +54,8 @@ Primero deberá subir el archivo con el conjunto de prueba en la sección corres
 
  **NOTA**: Si se utiliza el método de validación cruzada, solo se mostrará la matriz de confusión con los mejores resultados
 
+
+ ## Instrucciones de instalación
+
+ Para poder usar esta implementación se debe clonar el repositorio de manera local con  `git clone https://github.com/JFernando122/Clasificador-knn.git` y utlizar el comando `npm init`
+

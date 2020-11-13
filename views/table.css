@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.table-wrapper{
+    text-align: center;
+}
+
+table{
+    margin-top: 10px;
+}
+
+td, th{
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.tableHeader{
+    background-color: blue;
+    color: white;
+}
+.diagonal{
+    background-color: greenyellow;
+}
+
+.return{
+    margin-left: 10vw;
+}
+.return > a:visited{
+    color: blue;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #knn{
+        margin: 10px, auto;
+    }
+    .table-wrapper{
+        margin-bottom: 15px;
+    }
+}

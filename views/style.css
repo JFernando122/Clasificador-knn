@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40vw;
+    text-align: center;
+}
+
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-link{
+    width: 50%;
+    padding: 1em;
+    font-size: 1.1em;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #00F;
+    color: white;
+    text-decoration: none;
+    transition: background 500ms;
+}
+
+.nav-link:hover{
+    background-color: rgb(0, 132, 255);
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    margin-top: 3em;
+    display: flex;
+    gap: 1.6em;
+}
+
+.form-group{
+    border: 1px solid black;
+    padding: 4em;
+}
+
+.form-group > legend{
+    position: relative;
+    top: -83px;
+    left: -60px;
+    font-weight: 700;
+    font-size: 1.6em;
+    background-color: white;
+    width: fit-content;
+}
+
+.dataFile-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.validation-options{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn{
+    padding: 1.2em;
+    border-radius: 5px;
+    color: white;
+    transition: background 500ms;
+}
+
+#btn-submit{
+    background-color: darkblue;
+}
+
+#btn-submit:hover{
+    background-color: rgb(0, 132, 255);
+}
+
+
+#btn-reset{
+    background-color: orangered;
+}
+
+#btn-reset:hover{
+    background-color: rgb(255, 187, 0);
+}
+
+@media only screen and (max-width: 950px) {
+    form{
+        flex-direction: column;
+    }
+    .btn{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    header{
+        width: 100%;
+    }
+    .nav-bar{
+        flex-direction: column;
+    }
+    .nav-link{
+        width: 100%;
+    }
+  }

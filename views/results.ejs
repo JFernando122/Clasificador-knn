@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Proyecto de Tratamiento de la Informaci&oacute;n</h1>
+        <nav class="nav-bar">
+                <a href="#" class="nav-link"> Acerca de mi </a>
+                <a href="#" class="nav-link"> Acerca del Proyecto </a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+    <div class="table-wrapper">
+        <h2>Resultados de Naive Bayes</h2>
+        <table id="bayes">
+        <thead>
+            <tr>
+                <tr>
+                    <td colspan="2" rowspan="2" style="border: none;"></td>
+                    <td colspan="<%= bayes.length %>" style="text-align: center;">Valor Esperado</td>
+                </tr>
+                <% bayes.forEach((element,index) => { %> 
+                    <th class='tableHeader'>
+                        <%= index %> 
+                    </th>
+                <% }) %> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="<%= bayes.length + 2 %>" id="horizontal-text">
+                    V <br>
+                    a <br>
+                    l <br>
+                    o <br>
+                    r <br>
+                      <br>
+                    p <br>
+                    r <br>
+                    e <br>
+                    d <br>
+                    e <br>
+                    c <br>
+                    i <br>
+                    d <br>
+                    o <br>
+
+                </td>
+            </tr>
+            <%bayes.forEach((element,i) => { %>
+                <tr>
+                    <td class='tableHeader'> <%= i %></td>
+                    <% element.forEach((item,j) =>{ %> 
+                        <% if(i == j){ %> 
+                            <td class="diagonal">
+                        <% }else{ %> 
+                        <td>
+                        <% } %> 
+                            <%= item %> 
+                        </td>
+                    <% }) %> 
+                </tr>
+            <%  }); %> 
+        </tbody>
+        </table>
+    
+    </div>
+    <div class="table-wrapper">
+
+        <h2>Resultados de K-NN</h2>
+        <table id="knn">
+        <thead>
+            <tr>
+                <tr>
+                    <td colspan="2" rowspan="2" style="border: none;"></td>
+                    <td colspan="<%= knn.length %>" style="text-align: center;">Valor Esperado</td>
+                </tr>
+                <% knn.forEach((element,index) => { %> 
+                    <th class='tableHeader'>
+                        <%= index %> 
+                    </th>
+                <% }) %> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="<%= bayes.length + 2 %>" id="horizontal-text">
+                    V <br>
+                    a <br>
+                    l <br>
+                    o <br>
+                    r <br>
+                      <br>
+                    p <br>
+                    r <br>
+                    e <br>
+                    d <br>
+                    e <br>
+                    c <br>
+                    i <br>
+                    d <br>
+                    o <br>
+
+                </td>
+            </tr>
+            <%knn.forEach((element,i) => { %>
+                <tr>
+                    <td class='tableHeader'> <%= i %></td>
+                    <% element.forEach((item,j) =>{ %> 
+                        <% if(i == j){ %> 
+                            <td class="diagonal">
+                        <% }else{ %> 
+                        <td>
+                        <% } %> 
+                            <%= item %> 
+                        </td>
+                    <% }) %> 
+                </tr>
+            <%  }); %> 
+        </tbody>
+        </table>
+    </div>
+
+</div>
+
+<div class="return">
+    <a href="index.html">Regresar</a>
+</div>
+
+</body>
+</html>

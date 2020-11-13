@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Proyecto de Tratamiento de la Informaci&oacute;n</h1>
+        <nav class="nav-bar">
+                <a href="#" class="nav-link"> Acerca de mi </a>
+                <a href="#" class="nav-link"> Acerca del Proyecto </a>
+        </nav>
+    </header>
+    <div class="form-wrapper">
+        <form action="/" method="post" enctype="multipart/form-data">
+                <div class="form-group dataFile-wrapper">
+                    <legend>
+                        <label for="trainData">Conjunto de Entrenamiento</label>
+                    </legend>
+                    <img src="img/dataTrain.jpg" alt="" id="trainImage">
+                    <br>
+                    <input type="file" name="trainData" id="trainData" required>
+                    <label for="vecinos" id="vecinos" style="margin-top: 10px;">
+                        k:<input type="number" name="k" id="k" min="1", max="15" value="1" required>
+                    </label>
+                    <label for="distance">
+                        Distance Function: 
+                        <select name="distance" id="distance">
+                            <option value="Eucledian" selected>Eucledian</option>
+                            <option value="Manhattan">Manhattan</option>
+                            <option value="Chebychev">Chebychev</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="validation-options">
+
+                    <div class="form-group">
+                        <legend>
+                            <input type="radio" name="validation" id="testFileButton" value="testFile" checked onchange="testFileActive()" formenctype="application/x-www-form-urlencoded">
+                            <label for="testFileButton">Subir archivo de prueba</label>
+                        </legend>
+                        <input type="file" name="testFile" id="testFile" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <legend>
+                            <input type="radio" name="validation" id="CrossValidation" value="folds" onchange="foldsActive()" formenctype="application/x-www-form-urlencoded">
+                            <label for="CrossValidation">Validaci&oacute;n Cruzada</label>
+                        </legend>
+                        <input type="number" name="folds" id="folds" value="5" max="10" min="2" disabled>
+                    </div>
+                    <div class="button-group">
+                        <input type="submit" value="Enviar" id="btn-submit" class="btn">
+                        <input type="reset"  value="Reset" id="btn-reset" class="btn">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    <script src="validation.js"></script>
+</body>
+</html>
